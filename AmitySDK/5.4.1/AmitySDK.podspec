@@ -12,15 +12,11 @@ Pod::Spec.new do |s|
                   LICENSE
                 }
     s.author             = { "$(git config user.name)" => "$(git config user.email)" }
-    s.source       = { :http => 'https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios/5.4.1/amitysdk.zip' }
-    s.vendored_frameworks = 'amitysdk/Frameworks/AmitySDK.xcframework'
+    s.source       = { :http => 'https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios/qa/Cocoapod/build.zip' }
+    s.vendored_frameworks = 'AmitySDK.xcframework'
     s.platform = :ios
     s.swift_version = "5"
-    s.ios.deployment_target  = '12.0'
-    s.dependency 'Realm', '~> 10.12.0'
+    s.ios.deployment_target  = '13.0'
+    s.dependency 'RealmSwift'
 
-    # Exclude arm64 architecture
-    s.pod_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-    s.user_target_xcconfig = { 'EXCLUDED_ARCHS[sdk=iphonesimulator*]' => 'arm64' }
-    
 end
