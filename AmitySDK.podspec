@@ -12,11 +12,11 @@ Pod::Spec.new do |s|
                   LICENSE
                 }
     s.author             = { "$(git config user.name)" => "$(git config user.email)" }
-    s.source       = { :http => 'https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios/qa/Cocoapod/build.zip' }
+    s.source       = { :http => 'https://s3-ap-southeast-1.amazonaws.com/ekosdk-release/ios/qa/Cocoapod1/build.zip' }
     s.vendored_frameworks = 'AmitySDK.xcframework'
     s.platform = :ios
     s.swift_version = "5"
     s.ios.deployment_target  = '13.0'
-    s.dependency 'RealmSwift'
+    s.dependency 'RealmSwift', '10.42.0'
 
 end
